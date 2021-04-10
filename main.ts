@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    if (Mode < 1) {
+    if (Mode < 3) {
         Mode += 1
         i = 0
         richtung = 1
@@ -48,6 +48,26 @@ input.onButtonPressed(Button.B, function () {
         farbe = 0
     }
 })
+function off_time () {
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # . # . #
+        # . . . #
+        . # # # .
+        `)
+    strip.easeBrightness()
+    strip.show()
+}
+function flakern () {
+    if (i % 2 == 1) {
+        strip.showColor(neopixel.rgb(i, i, i))
+    } else {
+        strip.showColor(neopixel.rgb(0, 0, 0))
+    }
+    i += 1
+    basic.pause(10)
+}
 let farbe = 0
 let richtung = 0
 let i = 0
@@ -63,7 +83,9 @@ basic.forever(function () {
         Regenbogen()
     } else if (Mode == 1) {
         Pulse()
-    } else {
-    	
+    } else if (Mode == 2) {
+        off_time()
+    } else if (Mode == 3) {
+        flakern()
     }
 })
