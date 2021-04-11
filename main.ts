@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    if (Mode < 3) {
+    if (Mode < 4) {
         Mode += 1
         i = 0
         richtung = 1
@@ -48,6 +48,20 @@ input.onButtonPressed(Button.B, function () {
         farbe = 0
     }
 })
+function neigug () {
+    r1 = strip.range(0, 1)
+    r2 = strip.range(1, 1)
+    r3 = strip.range(2, 1)
+    r4 = strip.range(3, 1)
+    r5 = strip.range(4, 1)
+    r6 = strip.range(5, 1)
+    r7 = strip.range(6, 1)
+    r8 = strip.range(7, 1)
+    r9 = strip.range(8, 1)
+    r10 = strip.range(9, 1)
+    r11 = strip.range(10, 1)
+    r12 = strip.range(11, 1)
+}
 function off_time () {
     basic.showLeds(`
         . . # . .
@@ -68,6 +82,18 @@ function flakern () {
     i += 1
     basic.pause(10)
 }
+let r12: neopixel.Strip = null
+let r11: neopixel.Strip = null
+let r10: neopixel.Strip = null
+let r9: neopixel.Strip = null
+let r8: neopixel.Strip = null
+let r7: neopixel.Strip = null
+let r6: neopixel.Strip = null
+let r5: neopixel.Strip = null
+let r4: neopixel.Strip = null
+let r3: neopixel.Strip = null
+let r2: neopixel.Strip = null
+let r1: neopixel.Strip = null
 let farbe = 0
 let richtung = 0
 let i = 0
@@ -87,5 +113,7 @@ basic.forever(function () {
         off_time()
     } else if (Mode == 3) {
         flakern()
+    } else if (Mode == 4) {
+        neigug()
     }
 })
