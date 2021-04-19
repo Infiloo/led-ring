@@ -1,17 +1,22 @@
-input.onButtonPressed(Button.A, function () {
+input.onButtonPressed(Button.A, function on_button_pressed_a() {
+    
     if (Mode < 4) {
         Mode += 1
         i = 0
         richtung = 1
         farbe = 0
     }
+    
 })
-function Regenbogen () {
+function Regenbogen() {
+    
     strip.showRainbow(i + 1, i + 360)
     i = i + 10
     basic.pause(10)
 }
-function Pulse () {
+
+function Pulse() {
+    
     if (farbe == 0) {
         strip.showColor(neopixel.rgb(i, 0, 0))
     } else if (farbe == 1) {
@@ -25,6 +30,7 @@ function Pulse () {
     } else if (farbe == 5) {
         strip.showColor(neopixel.rgb(0, i, i))
     }
+    
     strip.show()
     basic.pause(10)
     if (richtung == 1) {
@@ -32,57 +38,91 @@ function Pulse () {
         if (i >= 240) {
             richtung = 0
         }
+        
     } else {
         i = i - 10
         if (i <= 10) {
             richtung = 1
             farbe = randint(0, 5)
         }
+        
     }
+    
 }
-function kreisel () {
+
+function kreisel() {
+    
     strip.showColor(neopixel.colors(NeoPixelColors.Black))
     if (i == 0) {
         r1.showColor(neopixel.colors(NeoPixelColors.Red))
+        r13.showColor(neopixel.colors(NeoPixelColors.Red))
+        r25.showColor(neopixel.colors(NeoPixelColors.Red))
     } else if (i == 1) {
         r2.showColor(neopixel.colors(NeoPixelColors.Orange))
+        r14.showColor(neopixel.colors(NeoPixelColors.Orange))
+        r26.showColor(neopixel.colors(NeoPixelColors.Orange))
     } else if (i == 2) {
         r3.showColor(neopixel.colors(NeoPixelColors.Yellow))
+        r15.showColor(neopixel.colors(NeoPixelColors.Yellow))
+        r27.showColor(neopixel.colors(NeoPixelColors.Yellow))
     } else if (i == 3) {
         r4.showColor(neopixel.colors(NeoPixelColors.Green))
+        r16.showColor(neopixel.colors(NeoPixelColors.Green))
+        r28.showColor(neopixel.colors(NeoPixelColors.Green))
     } else if (i == 4) {
         r5.showColor(neopixel.colors(NeoPixelColors.Blue))
+        r17.showColor(neopixel.colors(NeoPixelColors.Blue))
+        r29.showColor(neopixel.colors(NeoPixelColors.Blue))
     } else if (i == 5) {
         r6.showColor(neopixel.colors(NeoPixelColors.Indigo))
+        r18.showColor(neopixel.colors(NeoPixelColors.Indigo))
+        r30.showColor(neopixel.colors(NeoPixelColors.Indigo))
     } else if (i == 6) {
         r7.showColor(neopixel.colors(NeoPixelColors.Violet))
+        r19.showColor(neopixel.colors(NeoPixelColors.Violet))
+        r31.showColor(neopixel.colors(NeoPixelColors.Violet))
     } else if (i == 7) {
         r8.showColor(neopixel.colors(NeoPixelColors.Purple))
+        r20.showColor(neopixel.colors(NeoPixelColors.Purple))
+        r32.showColor(neopixel.colors(NeoPixelColors.Purple))
     } else if (i == 8) {
         r9.showColor(neopixel.colors(NeoPixelColors.Orange))
+        r21.showColor(neopixel.colors(NeoPixelColors.Orange))
+        r33.showColor(neopixel.colors(NeoPixelColors.Orange))
     } else if (i == 9) {
         r10.showColor(neopixel.colors(NeoPixelColors.Yellow))
+        r22.showColor(neopixel.colors(NeoPixelColors.Yellow))
+        r34.showColor(neopixel.colors(NeoPixelColors.Yellow))
     } else if (i == 10) {
         r11.showColor(neopixel.colors(NeoPixelColors.Green))
+        r23.showColor(neopixel.colors(NeoPixelColors.Green))
+        r35.showColor(neopixel.colors(NeoPixelColors.Green))
     } else if (i == 11) {
         r12.showColor(neopixel.colors(NeoPixelColors.Blue))
+        r24.showColor(neopixel.colors(NeoPixelColors.Blue))
+        r36.showColor(neopixel.colors(NeoPixelColors.Blue))
     }
+    
     if (i < 11) {
         i += 1
     } else {
         i = 0
     }
+    
     basic.pause(10)
 }
-input.onButtonPressed(Button.B, function () {
+
+input.onButtonPressed(Button.B, function on_button_pressed_b() {
+    
     if (Mode > 0) {
         Mode += -1
         i = 0
         richtung = 1
         farbe = 0
     }
+    
 })
-function off_time () {
+function off_time() {
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -93,32 +133,36 @@ function off_time () {
     strip.easeBrightness()
     strip.show()
 }
-function flakern () {
+
+function flakern() {
+    
     if (i % 2 == 1) {
         strip.showColor(neopixel.rgb(i, i, i))
     } else {
         strip.showColor(neopixel.rgb(0, 0, 0))
     }
+    
     i += 1
     basic.pause(10)
 }
+
 let farbe = 0
 let richtung = 0
 let i = 0
 let Mode = 0
-let r12: neopixel.Strip = null
-let r11: neopixel.Strip = null
-let r10: neopixel.Strip = null
-let r9: neopixel.Strip = null
-let r8: neopixel.Strip = null
-let r7: neopixel.Strip = null
-let r6: neopixel.Strip = null
-let r5: neopixel.Strip = null
-let r4: neopixel.Strip = null
-let r3: neopixel.Strip = null
-let r2: neopixel.Strip = null
-let r1: neopixel.Strip = null
-let strip: neopixel.Strip = null
+let r12 : neopixel.Strip = null
+let r11 : neopixel.Strip = null
+let r10 : neopixel.Strip = null
+let r9 : neopixel.Strip = null
+let r8 : neopixel.Strip = null
+let r7 : neopixel.Strip = null
+let r6 : neopixel.Strip = null
+let r5 : neopixel.Strip = null
+let r4 : neopixel.Strip = null
+let r3 : neopixel.Strip = null
+let r2 : neopixel.Strip = null
+let r1 : neopixel.Strip = null
+let strip : neopixel.Strip = null
 strip = neopixel.create(DigitalPin.P0, 36, NeoPixelMode.RGB)
 r1 = strip.range(0, 1)
 r2 = strip.range(1, 1)
@@ -160,7 +204,7 @@ Mode = 0
 i = 0
 richtung = 1
 farbe = 0
-basic.forever(function () {
+basic.forever(function on_forever() {
     if (Mode == 0) {
         Regenbogen()
     } else if (Mode == 1) {
@@ -172,4 +216,5 @@ basic.forever(function () {
     } else if (Mode == 4) {
         kreisel()
     }
+    
 })

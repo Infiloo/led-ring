@@ -42,28 +42,52 @@ def kreisel():
     strip.show_color(neopixel.colors(NeoPixelColors.BLACK))
     if i == 0:
         r1.show_color(neopixel.colors(NeoPixelColors.RED))
+        r13.show_color(neopixel.colors(NeoPixelColors.RED))
+        r25.show_color(neopixel.colors(NeoPixelColors.RED))
     elif i == 1:
         r2.show_color(neopixel.colors(NeoPixelColors.ORANGE))
+        r14.show_color(neopixel.colors(NeoPixelColors.ORANGE))
+        r26.show_color(neopixel.colors(NeoPixelColors.ORANGE))
     elif i == 2:
         r3.show_color(neopixel.colors(NeoPixelColors.YELLOW))
+        r15.show_color(neopixel.colors(NeoPixelColors.YELLOW))
+        r27.show_color(neopixel.colors(NeoPixelColors.YELLOW))
     elif i == 3:
         r4.show_color(neopixel.colors(NeoPixelColors.GREEN))
+        r16.show_color(neopixel.colors(NeoPixelColors.GREEN))
+        r28.show_color(neopixel.colors(NeoPixelColors.GREEN))
     elif i == 4:
         r5.show_color(neopixel.colors(NeoPixelColors.BLUE))
+        r17.show_color(neopixel.colors(NeoPixelColors.BLUE))
+        r29.show_color(neopixel.colors(NeoPixelColors.BLUE))
     elif i == 5:
         r6.show_color(neopixel.colors(NeoPixelColors.INDIGO))
+        r18.show_color(neopixel.colors(NeoPixelColors.INDIGO))
+        r30.show_color(neopixel.colors(NeoPixelColors.INDIGO))
     elif i == 6:
         r7.show_color(neopixel.colors(NeoPixelColors.VIOLET))
+        r19.show_color(neopixel.colors(NeoPixelColors.VIOLET))
+        r31.show_color(neopixel.colors(NeoPixelColors.VIOLET))
     elif i == 7:
         r8.show_color(neopixel.colors(NeoPixelColors.PURPLE))
+        r20.show_color(neopixel.colors(NeoPixelColors.PURPLE))
+        r32.show_color(neopixel.colors(NeoPixelColors.PURPLE))
     elif i == 8:
         r9.show_color(neopixel.colors(NeoPixelColors.ORANGE))
+        r21.show_color(neopixel.colors(NeoPixelColors.ORANGE))
+        r33.show_color(neopixel.colors(NeoPixelColors.ORANGE))
     elif i == 9:
         r10.show_color(neopixel.colors(NeoPixelColors.YELLOW))
+        r22.show_color(neopixel.colors(NeoPixelColors.YELLOW))
+        r34.show_color(neopixel.colors(NeoPixelColors.YELLOW))
     elif i == 10:
         r11.show_color(neopixel.colors(NeoPixelColors.GREEN))
+        r23.show_color(neopixel.colors(NeoPixelColors.GREEN))
+        r35.show_color(neopixel.colors(NeoPixelColors.GREEN))
     elif i == 11:
         r12.show_color(neopixel.colors(NeoPixelColors.BLUE))
+        r24.show_color(neopixel.colors(NeoPixelColors.BLUE))
+        r36.show_color(neopixel.colors(NeoPixelColors.BLUE))
     if i < 11:
         i += 1
     else:
@@ -101,30 +125,6 @@ farbe = 0
 richtung = 0
 i = 0
 Mode = 0
-r36: neopixel.Strip = None
-r35: neopixel.Strip = None
-r34: neopixel.Strip = None
-r33: neopixel.Strip = None
-r32: neopixel.Strip = None
-r31: neopixel.Strip = None
-r30: neopixel.Strip = None
-r29: neopixel.Strip = None
-r28: neopixel.Strip = None
-r27: neopixel.Strip = None
-r26: neopixel.Strip = None
-r25: neopixel.Strip = None
-r24: neopixel.Strip = None
-r23: neopixel.Strip = None
-r22: neopixel.Strip = None
-r21: neopixel.Strip = None
-r20: neopixel.Strip = None
-r19: neopixel.Strip = None
-r18: neopixel.Strip = None
-r17: neopixel.Strip = None
-r16: neopixel.Strip = None
-r15: neopixel.Strip = None
-r14: neopixel.Strip = None
-r13: neopixel.Strip = None
 r12: neopixel.Strip = None
 r11: neopixel.Strip = None
 r10: neopixel.Strip = None
