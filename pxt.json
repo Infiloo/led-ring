@@ -1,5 +1,5 @@
 {
-    "name": "led ring😎",
+    "name": "led ring #3",
     "version": "5.0.0",
     "description": "",
     "dependencies": {
@@ -17,6 +17,10 @@
     "testFiles": [
         "test.ts"
     ],
+    "targetVersions": {
+        "target": "6.0.17",
+        "targetId": "microbit"
+    },
     "supportedTargets": [
         "microbit"
     ],
